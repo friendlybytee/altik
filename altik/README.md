@@ -25,8 +25,9 @@ FFmpeg и pyannote.audio для коротких браузерных запис
 4. Установите Ollama с https://ollama.com/download и запустите приложение Ollama (или `ollama serve`, если сервер ещё не запущен).
 5. Выполните `ollama pull embeddinggemma`.
 6. Укажите `OLLAMA_API_KEY` из https://ollama.com/settings/keys и `TYPESAFE_API_KEY` для Jev в `.env`. Модель облачного чата: `gemma4:31b`.
-7. Заполните `data/knowledge.txt` в UTF-8. Разделяйте чанки пустыми строками.
-8. Запустите `start.cmd` или `.venv/bin/python -m streamlit run src/app.py` из папки `code`.
+7. Установите модель для синтеза голоса с `https://models.silero.ai/models/tts/ru/v5_5_ru.pt`. Создайте папку altik/models/ и положите модель в неё.
+8. Заполните `data/knowledge.txt` в UTF-8. Разделяйте чанки пустыми строками.
+9. Запустите `start.cmd` или `.venv/bin/python -m streamlit run src/app.py` из папки `code`.
 
 Необязательно: положите `assets/mascot.png`, чтобы заменить заглушку маскота.
 
@@ -94,3 +95,9 @@ API: https://docs.ollama.com/api/embed и https://docs.ollama.com/api/openai-com
 Для однословного названия учитывается полный заголовок: запрос
 «направление искусство» совпадает с «НАПРАВЛЕНИЕ «ИСКУССТВО»» даже при
 низкой семантической оценке. Отдельное общее слово не отменяет порог.
+
+`.env_example`:
+OLLAMA_API_KEY=
+CHAT_MODEL=gemma4:31b
+TYPESAFE_API_KEY=
+TYPESAFE_MODEL=jev-latest
