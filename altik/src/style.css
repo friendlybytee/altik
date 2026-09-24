@@ -1,0 +1,66 @@
+[data-testid="stAppScrollToBottomContainer"],
+[data-testid="stMain"] {
+    background-color: #fff;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='900' viewBox='0 0 360 900'%3E%3Cg fill='none' stroke='%23edf0f2' stroke-width='1'%3E%3Cpath d='M0 0L75 80 240 25 190 230 0 145M75 80L0 310 185 370 190 230 360 310M240 25L340 130 190 230 75 80M0 310L70 515 185 370 290 570 360 310M0 635L70 515 225 670 290 570 360 790M0 900L105 820 225 670 260 900M0 635L105 820 70 515M185 370L225 670M105 820L0 785'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='430' height='950' viewBox='0 0 430 950'%3E%3Cg fill='none' stroke-linecap='round' stroke-width='64'%3E%3Cpath stroke='%23e0f3f8' d='M270 80L470 -120M35 540L470 105M125 725L470 380M245 850L470 625'/%3E%3Cpath stroke='%23f0f9fc' d='M120 320L470 -30M175 495L470 200M285 610L470 425M355 905L470 790'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: left top, right top;
+    background-size: min(25vw, 360px) auto, min(30vw, 430px) auto;
+    background-repeat: no-repeat;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #edf0f2;
+    box-shadow: 0 5px 20px #182e5510;
+}
+
+/* Keep the existing mascot/title row; add the reference's thin blue rule. */
+[data-testid="stMainBlockContainer"] [data-testid="stHorizontalBlock"]:first-child {
+    align-items: center;
+    border-bottom: 2px solid #2548b8;
+    padding-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+[data-testid="stHeading"] h1 {
+    color: #353d91;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: #606875;
+}
+
+[data-testid="stSidebar"] {
+    border-top: 4px solid #2548b8;
+}
+
+[data-testid="stChatMessage"] {
+    background: #f7fafc;
+    border: 1px solid #e1e8ef;
+    border-left: 3px solid #2548b8;
+    border-radius: 8px;
+}
+
+[data-testid="stExpander"] {
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+[data-testid="stChatInput"] {
+    border: 1px solid #b4c4e4;
+    background: #fff;
+    box-shadow: 0 3px 16px #2548b810;
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: #2548b8;
+    box-shadow: 0 0 0 2px #2548b825;
+}
+
+@media (max-width: 768px) {
+    [data-testid="stAppScrollToBottomContainer"],
+    [data-testid="stMain"] {
+        background-size: 22vw auto, 30vw auto;
+    }
+}
